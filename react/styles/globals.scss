@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-light-mode-background  dark:bg-dark-mode-background dark:text-white;
+    @apply min-h-screen;
+  }
+
+  hr {
+    @apply dark:border-gray-500;
+  }
+
+  ::selection {
+    @apply dark:bg-blue-600;
+  }
+}
+
+.MuiDrawer-paper {
+  @apply dark:bg-dark-mode-app-bar;
+}
+
+.Mui-checked {
+  @apply text-primary-light #{!important};
+}
+
+.MuiSwitch-track {
+  @apply dark:bg-primary-dark #{!important};
+}
+
+.MuiBadge-badge {
+  @apply bg-red-500 dark:bg-primary-dark text-white;
+}
+
+.MuiPaper-elevation {
+  @apply dark:bg-dark-mode-app-bar dark:text-white dark:before:bg-dark-mode-app-bar;
+}
+
+.MuiCheckbox-root {
+  @apply dark:text-white;
+}
+
+.MuiListItem-root .MuiTouchRipple-child {
+  @apply bg-primary-light/[.5];
+}
+
+.MuiSelect-select {
+  @apply dark:text-white #{!important};
+}
+
+.MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+  @apply dark:border-white #{!important};
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  @apply border-primary-light #{!important};
+}
+
+.MuiFormLabel-colorPrimary {
+  @apply dark:text-white #{!important};
+}
+
+.MuiFormLabel-colorPrimary.Mui-focused {
+  @apply text-primary-light #{!important};
+}
+
+.filepond--drop-label {
+  @apply mt-4;
+}
+
+.filepond--credits {
+  display: none;
+}
